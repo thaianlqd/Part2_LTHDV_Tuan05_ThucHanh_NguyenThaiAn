@@ -10,6 +10,11 @@ const cookieParser = require("cookie-parser"); // Thêm cookie-parser
 
 const app = express();
 
+
+const swaggerDocs = require("./swagger");
+swaggerDocs(app);
+
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
